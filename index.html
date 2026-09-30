@@ -1,0 +1,430 @@
+{% load static %}
+{% load cropping %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sneha M. — AI Engineer building GenAI, backend and intelligent software systems.">
+  <meta name="theme-color" content="#0b0d12">
+  <title>Sneha M. | AI Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'style.css' %}?v=3">
+</head>
+<body>
+  <div class="noise"></div>
+
+  <header class="nav">
+    <a class="brand" href="#home">SM<span>.</span></a>
+    <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+    <nav id="navLinks">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#articles">Articles</a>
+      <a href="#community">Beyond the Screen</a>
+      <a href="#education">Education</a>
+      <a href="#certifications">Certifications</a>
+      <a href="{% url 'freelance' %}">Freelance</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="nav-cta" href="#contact">Let's talk ↗</a>
+  </header>
+
+  <main>
+    <section id="home" class="hero section">
+      <canvas id="network-canvas" class="hero-3d-bg"></canvas>
+      <div class="hero-copy reveal">
+        <p class="eyebrow"><span class="dot"></span> AI ENGINEER · GENAI · BACKEND</p>
+        <h1 style="text-align: center; margin: 0 auto;"><span style="white-space: nowrap;">Engineering software</span><br><em>that thinks.</em></h1>
+        <p class="hero-text">
+          I'm <strong>Sneha M.</strong>, a Software Engineer specializing in AI — building intelligent applications,<br>scalable backend systems, and automation that solve real-world problems.
+        </p>
+        <div class="hero-socials reveal">
+          <a href="https://www.instagram.com/snehamurugesan47/" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://www.linkedin.com/in/sneha-m-22ad47" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://github.com/sneha517-star" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://medium.com/@snehamurugesan672" target="_blank" rel="noopener">Medium</a>
+          <a href="mailto:snehamurugesan672@gmail.com">Email</a>
+        </div>
+        <div class="hero-actions reveal">
+          <a class="button primary" href="#projects">View my work ↘</a>
+          <a class="button ghost" href="{% static 'Resume.pdf' %}" download>Download Resume ↓</a>
+        </div>
+        <div class="quick-stats">
+          <div><strong>AI</strong><span>Engineering</span></div>
+          <div><strong>GenAI</strong><span>RAG · Agents · LLMs</span></div>
+          <div><strong>Backend</strong><span>Python · Django · SQL</span></div>
+        </div>
+      </div>
+
+      <div class="hero-terminal reveal delay-1">
+        <div class="terminal-head">
+          <span></span><span></span><span></span>
+          <small>ai-engineer@portfolio ~</small>
+        </div>
+        <div class="terminal-body">
+          <p><span class="prompt">$</span> cat profile.json</p>
+          <pre>{
+  <i>"name"</i>: <b>"Sneha M."</b>,
+  <i>"role"</i>: <b>"AI Engineer"</b>,
+  <i>"focus"</i>: [
+    "Generative AI",
+    "RAG & LLM Applications",
+    "Agentic AI",
+    "Backend Systems"
+  ],
+  <i>"stack"</i>: {
+    "language": "Python",
+    "backend": ["Django", "Flask", "Node.js"],
+    "data": ["SQL", "PostgreSQL", "MongoDB"],
+    "ai": ["LangChain", "LangGraph", "RAG", "LLMs"]
+  },
+  <i>"status"</i>: <b>"building & learning"</b>
+}</pre>
+          <p><span class="prompt">$</span> <span class="cursor"></span></p>
+        </div>
+      </div>
+    </section>
+
+    <div class="ticker">
+      <div class="ticker-track">
+        <span>PYTHON ✦</span><span>GENAI ✦</span><span>RAG ✦</span><span>LANGGRAPH ✦</span>
+        <span>DJANGO ✦</span><span>SQL ✦</span><span>AGENTIC AI ✦</span><span>REACT ✦</span>
+        <span>PYTHON ✦</span><span>GENAI ✦</span><span>RAG ✦</span><span>LANGGRAPH ✦</span>
+        <span>DJANGO ✦</span><span>SQL ✦</span><span>AGENTIC AI ✦</span><span>REACT ✦</span>
+      </div>
+    </div>
+
+    <section id="about" class="section">
+      <div class="section-label">01 / ABOUT</div>
+      <div class="about-grid">
+        <div>
+          <h2>Engineering<br><em>intelligent systems.</em></h2>
+        </div>
+        <div class="about-content">
+          <p class="lead">
+            I build robust software powered by GenAI, multi-agent architectures, and scalable backend systems.
+          </p>
+          <p>
+            I am an Artificial Intelligence & Data Science graduate with a strong academic background (8.9 CGPA). Currently, as an AI Engineer, I build production-ready software across desktop applications, backend systems, and real-time monitoring platforms.
+          </p>
+          <p>
+            My passion lies in bridging the gap between complex AI models and real-world applications. Whether it's orchestrating autonomous agents for market simulations using local LLMs (Ollama), building predictive IoT models with TensorFlow, or optimizing RAG workflows, I thrive on solving hard problems end-to-end.
+          </p>
+          <div class="value-grid">
+            <div><span>01</span><strong>Architect</strong><small>Multi-agent & RAG</small></div>
+            <div><span>02</span><strong>Develop</strong><small>Full-stack & Backend</small></div>
+            <div><span>03</span><strong>Deploy</strong><small>Scalable AI solutions</small></div>
+          </div>
+          <div class="core-values reveal">
+            <h3>Engineering Core Values</h3>
+            <ul>
+              <li><strong>Agentic AI First:</strong> Building autonomous, tool-calling reasoning engines.</li>
+              <li><strong>Scalable Backend:</strong> High-concurrency event loops and robust APIs.</li>
+              <li><strong>Data-Driven:</strong> Large-scale scraping, EDA, and predictive modeling.</li>
+              <li><strong>Secure Architecture:</strong> Emphasizing safe access controls and stable deployment.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="skills" class="section">
+      <div class="section-label">02 / TOOLKIT</div>
+      <div class="section-heading">
+        <div>
+          <h2>My technical<br><em>toolkit.</em></h2>
+        </div>
+        <p>Tools I use to move from data and ideas to production-ready software.</p>
+      </div>
+
+      <div class="skills-grid">
+        <article class="skill-card">
+          <span class="card-number">01</span>
+          <h3>AI / GenAI</h3>
+          <div class="tags"><span>LLMs</span><span>RAG</span><span>LangChain</span><span>LangGraph</span><span>Prompt Engineering</span><span>Agentic AI</span><span>NLP</span><span>Ollama</span>
+        </article>
+        <article class="skill-card">
+          <span class="card-number">02</span>
+          <h3>Backend</h3>
+          <div class="tags"><span>Python</span><span>Django</span><span>Flask</span><span>Node.js</span><span>REST APIs</span><span>Authentication</span></div>
+        </article>
+        <article class="skill-card">
+          <span class="card-number">03</span>
+          <h3>Data</h3>
+          <div class="tags"><span>SQL</span><span>PostgreSQL</span><span>MySQL</span><span>MongoDB</span><span>Pandas</span><span>NumPy</span></div>
+        </article>
+        <article class="skill-card">
+          <span class="card-number">04</span>
+          <h3>Web & Automation</h3>
+          <div class="tags"><span>React</span><span>html</span><span>Playwright</span><span>Selenium</span><span>Electron</span><span>Postman</span></div>
+        </article>
+        <article class="skill-card">
+          <span class="card-number">05</span>
+          <h3>ML / Deep Learning</h3>
+          <div class="tags"><span>TensorFlow</span><span>PyTorch</span><span>Scikit-learn</span><span>Matplotlib</span><span>EDA</span></div>
+        </article>
+        <article class="skill-card">
+          <span class="card-number">06</span>
+          <h3>Cloud & Dev Tools</h3>
+          <div class="tags"><span>AWS</span><span>GCP</span><span>Git</span><span>GitHub</span><span>VS Code</span><span>Linux</span></div>
+        </article>
+      </div>
+    </section>
+
+    <section id="experience" class="section">
+      <div class="section-label">03 / JOURNEY</div>
+      <div class="section-heading">
+        <h2>Experience &<br><em>learning.</em></h2>
+        <p>A timeline of where I've built, experimented and grown.</p>
+      </div>
+
+      <div class="timeline">
+        <article class="timeline-item">
+          <div class="timeline-date">2026 — PRESENT</div>
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <h3>AI Engineer Intern</h3>
+            <p class="company">Lysarq Solutions Pvt Ltd, Coimbatore
+            <p>Working across AI-enabled product development, backend systems and an online assessment platform using Python, Node.js, React and Git.</p>
+            <div class="mini-tags"><span>Python</span><span>AI</span><span>Django</span><span>React</span><span>Node.js</span></div>
+          </div>
+        </article>
+
+        <article class="timeline-item">
+          <div class="timeline-date">2025 — 2026</div>
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <h3>Data Analyst Intern</h3>
+            <p class="company">Gravity AI Technologies Pvt Ltd, Coimbatore</p>
+            <p>Worked on data collection, cleaning, EDA and web scraping for AI/ML and RAG-oriented workflows. Used Playwright, Selenium, BeautifulSoup, SQL, MongoDB and Python data tools.</p>
+            <div class="mini-tags"><span>Python</span><span>SQL</span><span>EDA</span><span>Scraping</span><span>MongoDB</span></div>
+          </div>
+        </article>
+
+        <article class="timeline-item">
+          <div class="timeline-date">2025</div>
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <h3>Software Engineering Intern</h3>
+            <p class="company">PRISM Software Solutions, Atlanta, GA , USA
+            <p>Worked with Python and LangChain to build a GenAI chatbot and explored Firebase-backed application workflows.</p>
+            <div class="mini-tags"><span>Python</span><span>LangChain</span><span>RAG</span><span>Firebase</span></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <div class="section-label">04 / SELECTED WORK</div>
+      <div class="section-heading">
+        <h2>Things I've<br><em>built.</em></h2>
+        <p>Selected projects that show how I think about AI, software and real-world problems.</p>
+      </div>
+
+      <div class="projects">
+        {% for project in projects %}
+        <article class="project {% if forloop.first %}featured{% endif %}">
+          <div class="project-top"><span>0{{ forloop.counter }}</span><span>{{ project.category }}</span></div>
+          {% if forloop.first %}
+          <div>
+            <h3>{{ project.title }}</h3>
+            <p>{{ project.description }}</p>
+            <div class="project-tags">
+              {% for tag in project.get_tags_list %}
+              <span>{{ tag }}</span>
+              {% endfor %}
+            </div>
+          </div>
+          {% else %}
+          <h3>{{ project.title }}</h3>
+          <p>{{ project.description }}</p>
+          <div class="project-tags">
+            {% for tag in project.get_tags_list %}
+            <span>{{ tag }}</span>
+            {% endfor %}
+          </div>
+          {% endif %}
+          {% if project.link %}
+          <a href="{{ project.link }}" target="_blank" rel="noopener" class="project-link">View project ↗</a>
+          {% endif %}
+        </article>
+        {% empty %}
+        <p>No projects added yet.</p>
+        {% endfor %}
+      </div>
+      <div style="text-align: center; margin-top: 3rem;">
+        <a class="button ghost" href="{% url 'projects' %}">View all projects ↗</a>
+      </div>
+    </section>
+
+    <section id="articles" class="section">
+      <div class="section-label">04.5 / WRITING</div>
+      <div class="section-heading">
+        <h2>Ideas &<br><em>Insights.</em></h2>
+        <p>A collection of my thoughts, articles, and technical blogs.</p>
+      </div>
+      <div class="projects" id="articlesContainer">
+        {% for article in articles %}
+        <article class="project reveal">
+          <div class="project-top"><span>WRITING</span><span>{{ article.date }}</span></div>
+          <h3>{{ article.title }}</h3>
+          <p>{{ article.excerpt }}</p>
+          <div class="project-tags">
+            {% for tag in article.get_tags_list %}
+            <span>{{ tag }}</span>
+            {% endfor %}
+          </div>
+          <a href="{{ article.link }}" target="_blank" rel="noopener" class="project-link">Read Article ↗</a>
+        </article>
+        {% endfor %}
+      </div>
+      <div style="text-align: center; margin-top: 3rem;">
+        <a class="button ghost" href="{% url 'articles' %}">View all articles ↗</a>
+      </div>
+    </section>
+
+    <section id="community" class="section">
+      <div class="section-label">05 / BEYOND THE SCREEN</div>
+      <div class="section-heading">
+        <div>
+          <h2>Beyond the<br><em>Screen.</em></h2>
+        </div>
+        <p>A collection of my external engagements, hackathons, and community contributions.</p>
+      </div>
+      <div class="projects community-grid">
+        {% for event in events %}
+        <article class="project reveal community-card">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+            <div class="project-top" style="margin: 0;"><span>{{ event.date }}</span></div>
+            <span style="background: var(--surface); border: 1px solid var(--border); padding: 5px 12px; border-radius: 20px; font-size: 0.75rem; font-weight: 600; color: var(--fg); font-family: 'DM Mono', monospace;">{{ event.event_type }}</span>
+          </div>
+          
+          {% if event.image %}
+          <img src="{% cropped_thumbnail event "cropping" %}" alt="{{ event.title }}" style="width: 100%; border-radius: 8px; border: 1px solid var(--border); margin-bottom: 20px;">
+          {% endif %}
+          
+          <h3>{{ event.title }}</h3>
+          <p>{{ event.description }}</p>
+          {% if event.link %}
+          <a href="{{ event.link }}" target="_blank" rel="noopener" class="project-link" style="margin-top: auto; padding-top: 15px;">View Post ↗</a>
+          {% endif %}
+        </article>
+        {% empty %}
+        <p>No community events added yet.</p>
+        {% endfor %}
+      </div>
+    </section>
+
+    <section id="education" class="section">
+      <div class="section-label">06 / EDUCATION</div>
+      <div class="education-grid">
+        <div>
+          <h2>Academic<br><em>background.</em></h2>
+        </div>
+        <div class="edu-list">
+          <article class="edu-item reveal">
+            <span class="year">2022 — 2026</span>
+            <h3>B.Tech in Artificial Intelligence & Data Science</h3>
+            <p>RVS College of Engineering and Technology, Coimbatore</p>
+            <p class="coursework">Relevant Coursework: DSA, OOPS, Computer Networks, DBMS, ML, Data Visualization, DL</p>
+            <strong>CGPA 8.9</strong>
+          </article>
+
+          <article class="edu-item reveal">
+            <span class="year">2019 — 2021</span>
+            <h3>HSC (Higher Secondary)</h3>
+            <p>Govt. Higher Secondary School, Marayoor, Keralam</p>
+            <strong>88.5%</strong>
+          </article>
+
+          <article class="edu-item reveal">
+            <span class="year">2018 — 2019</span>
+            <h3>SSLC (Secondary School)</h3>
+            <p>Sacred Heart High School, Kanthalloor, Keralam</p>
+            <strong>94.5%</strong>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="certifications" class="section">
+      <div class="section-label">06 / ACHIEVEMENTS</div>
+      <div class="section-heading">
+        <h2>Certifications &<br><em>Awards.</em></h2>
+      </div>
+      <div class="projects certs-grid">
+        {% for cert in certifications %}
+        <article class="project reveal">
+          <div class="project-top"><span style="text-transform: uppercase;">{{ cert.type }}</span><span>{{ cert.date_issued }}</span></div>
+          <h3>{{ cert.title }}</h3>
+          <p><strong>{{ cert.issuer }}</strong></p>
+          {% if cert.description %}
+          <p>{{ cert.description }}</p>
+          {% endif %}
+          {% if cert.link %}
+          <a href="{{ cert.link }}" target="_blank" rel="noopener" class="project-link" style="margin-top: 10px; display: inline-block;">View Credential ↗</a>
+          {% endif %}
+        </article>
+        {% empty %}
+        <p>No certifications added yet.</p>
+        {% endfor %}
+      </div>
+      <div style="text-align: center; margin-top: 3rem;">
+        <a class="button ghost" href="{% url 'certifications' %}">View all certifications ↗</a>
+      </div>
+    </section>
+
+    <section class="section metrics-section">
+      <div class="section-label">07 / SNAPSHOT</div>
+      <div class="metrics">
+        <div class="metric"><strong>8.9</strong><span>CGPA</span></div>
+        <div class="metric"><strong>3+</strong><span>Internship / industry experiences</span></div>
+        <div class="metric"><strong>AI +</strong><span>Backend focus</span></div>
+        <div class="metric"><strong>∞</strong><span>Curiosity to build</span></div>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact-section section-dark">
+      <div class="section-label">07 / CONTACT</div>
+      <div class="contact-grid">
+        <div>
+          <p class="eyebrow"><span class="dot"></span> OPEN TO OPPORTUNITIES</p>
+          <h2>Let's build<br><em>something useful.</em></h2>
+          <p class="contact-copy">Looking for opportunities in AI engineering, GenAI, backend development and intelligent software systems.</p>
+          <a class="email-link" href="mailto:snehamurugesan672@gmail.com">snehamurugesan672@gmail.com ↗</a>
+        </div>
+        <form id="contactForm" class="contact-form">
+          <label>NAME<input type="text" name="name" placeholder="Your name" required></label>
+          <label>EMAIL<input type="email" name="email" placeholder="you@company.com" required></label>
+          <label>MESSAGE<textarea name="message" rows="5" placeholder="Tell me what you'd like to discuss..." required></textarea></label>
+          <button class="button primary" type="submit">Send message ↗</button>
+          <p class="form-note">This opens your email app; no backend is required.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <span>© <span id="year"></span> Sneha M.</span>
+    <span>Built with HTML · CSS · JavaScript</span>
+    <div><a href="https://github.com/sneha517-star" target="_blank" rel="noopener">GitHub</a><a href="https://www.linkedin.com/in/sneha-m-22ad47" target="_blank" rel="noopener" aria-label="LinkedIn profile">LinkedIn</a><a href="https://medium.com/@snehamurugesan672" target="_blank" rel="noopener">Medium</a></div>
+  </footer>
+
+  <button id="topBtn" class="top-btn" aria-label="Back to top">↑</button>
+
+  <a href="https://wa.me/919497339153?text=Hi%20Sneha!" target="_blank" style="position: fixed; bottom: 30px; right: 90px; background-color: #25D366; color: white; width: 50px; height: 50px; border-radius: 50%; display: flex; justify-content: center; align-items: center; box-shadow: 0 4px 10px rgba(0,0,0,0.3); z-index: 1000; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
+      <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.004-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
+    </svg>
+  </a>
+
+  <script src="{% static 'script.js' %}"></script>
+  
+</body>
+</html>

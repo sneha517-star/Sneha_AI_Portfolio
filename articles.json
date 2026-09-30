@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "title": "5 Skills Every Graduate Needs to Stay Relevant in the Age of AI",
+    "excerpt": "Discover the essential skills required for graduates to thrive and stay competitive in a rapidly evolving, AI-driven landscape.",
+    "date": "Sep 2026",
+    "link": "https://medium.com/@snehamurugesan672/5-skills-every-graduate-needs-to-stay-relevant-in-the-age-of-ai-4348a214b237",
+    "tags": ["AI", "Career", "Future of Work"]
+  },
+  {
+    "id": 2,
+    "title": "Demystifying Agentic AI: A Practical Guide",
+    "excerpt": "An introduction to building autonomous AI agents using LangGraph and Python, focusing on tool-calling and state management.",
+    "date": "Sep 15, 2026",
+    "link": "#",
+    "tags": ["Agentic AI", "LangGraph", "Python"]
+  },
+  {
+    "id": 3,
+    "title": "Optimizing RAG Pipelines for Production",
+    "excerpt": "Techniques for improving retrieval accuracy in RAG systems, from semantic chunking to hybrid search and re-ranking.",
+    "date": "Aug 22, 2026",
+    "link": "#",
+    "tags": ["RAG", "LLMs", "Vector Search"]
+  }
+]

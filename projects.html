@@ -1,0 +1,55 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>All Projects | Sneha M.</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'style.css' %}?v=3">
+</head>
+<body>
+  <div class="noise"></div>
+  <header class="nav">
+    <a class="brand" href="{% url 'index' %}">SM<span>.</span></a>
+    <nav id="navLinks">
+      <a href="{% url 'index' %}">← Back to Home</a>
+      <a href="{% url 'freelance' %}">Freelance</a>
+    </nav>
+  </header>
+  <main>
+    <section class="section" style="padding-top: 15vh;">
+      <div class="section-label">THE ARCHIVE</div>
+      <div class="section-heading">
+        <div>
+          <h2>All<br><em>Projects.</em></h2>
+        </div>
+        <p>A complete collection of my software engineering and AI projects.</p>
+      </div>
+      <div class="projects">
+        {% for project in projects %}
+        <article class="project reveal" style="opacity: 1; transform: none;">
+          <div class="project-top"><span>0{{ forloop.counter }}</span><span>{{ project.category }}</span></div>
+          <h3>{{ project.title }}</h3>
+          <p>{{ project.description }}</p>
+          <div class="project-tags">
+            {% for tag in project.get_tags_list %}
+            <span>{{ tag }}</span>
+            {% endfor %}
+          </div>
+          {% if project.link %}
+          <a href="{{ project.link }}" target="_blank" rel="noopener" class="project-link">View project ↗</a>
+          {% endif %}
+        </article>
+        {% empty %}
+        <p>No projects added yet.</p>
+        {% endfor %}
+      </div>
+    </section>
+  </main>
+  <footer>
+    <span>© <span id="year">2026</span> Sneha M.</span>
+    <span>Built with HTML · CSS · JavaScript</span>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,53 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>All Certifications | Sneha M.</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'style.css' %}?v=2">
+</head>
+<body>
+  <div class="noise"></div>
+  <header class="nav">
+    <a class="brand" href="{% url 'index' %}">SM<span>.</span></a>
+    <nav id="navLinks">
+      <a href="{% url 'index' %}">← Back to Home</a>
+      <a href="{% url 'freelance' %}">Freelance</a>
+    </nav>
+  </header>
+  <main>
+    <section class="section" style="padding-top: 15vh;">
+      <div class="section-label">THE ARCHIVE</div>
+      <div class="section-heading">
+        <div>
+          <h2>All<br><em>Certifications.</em></h2>
+        </div>
+        <p>A complete collection of my certifications and awards.</p>
+      </div>
+      <div class="projects certs-grid">
+        {% for cert in certifications %}
+        <article class="project reveal" style="opacity: 1; transform: none;">
+          <div class="project-top"><span style="text-transform: uppercase;">{{ cert.type }}</span><span>{{ cert.date_issued }}</span></div>
+          <h3>{{ cert.title }}</h3>
+          <p><strong>{{ cert.issuer }}</strong></p>
+          {% if cert.description %}
+          <p>{{ cert.description }}</p>
+          {% endif %}
+          {% if cert.link %}
+          <a href="{{ cert.link }}" target="_blank" rel="noopener" class="project-link" style="margin-top: 10px; display: inline-block;">View Credential ↗</a>
+          {% endif %}
+        </article>
+        {% empty %}
+        <p>No certifications added yet.</p>
+        {% endfor %}
+      </div>
+    </section>
+  </main>
+  <footer>
+    <span>© <span id="year">2026</span> Sneha M.</span>
+    <span>Built with HTML · CSS · JavaScript</span>
+  </footer>
+</body>
+</html>
