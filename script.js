@@ -111,8 +111,8 @@ if(canvas) {
       ctx.fill();
       
       // Glow
-      ctx.shadowBlur = 15;
-      ctx.shadowColor = 'rgba(168, 85, 247, 1)';
+      // removed glow for mobile performance
+      ;
     }
     reCalculateLife() {
       if(this.life < 1) {
