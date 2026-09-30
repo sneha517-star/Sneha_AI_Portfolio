@@ -68,7 +68,8 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 // Network Particle Background
 const canvas = document.getElementById('network-canvas');
-if(canvas) {
+const isMobile = window.innerWidth < 768;
+if(canvas && !isMobile) {
   const ctx = canvas.getContext('2d');
   let width = canvas.width = window.innerWidth;
   let height = canvas.height = document.querySelector('.hero').offsetHeight;
